@@ -2,32 +2,225 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+
+/* custom css */
+.bg-nav {
+  background: linear-gradient(to top, #3f015a00, #3f015a8f, #7402a5);
+  font-family: 'Montserrat', sans-serif;
+  z-index: 2;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(70%);
+  }
+
+  50% {
+    transform: scale(100%);
+  }
+
+  100% {
+    transform: scale(70%);
+  }
+}
+
+.logo_ncl {
+  animation: animate 2s infinite;
+}
+
+.support {
+  border: solid;
+  border-radius: 50px;
+}
+
+
+/* hero section */
+.bg-hero {
+  background: url(/photos/img3.jpg), linear-gradient(to right, #000000, #000000, #dedede) center no-repeat;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-size: auto;
+  height: 110vh;
+}
+
+.vid_container {
+  background: linear-gradient(to right, #1b0027, #190422, #ffd900);
+  box-shadow: 0 8px 32px 0 rgba(211, 138, 20, 0.37);
+  border: 0.2px solid;
+  border-radius: 50px;
+  overflow: hidden;
+  background-blend-mode: multiply;
+}
+
+.card_image {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+
+.card_image .crd_img {
+  object-fit: cover;
+  width: 520px;
+  float: right;
+  border-radius: 50px;
+}
+
+.vid_title {
+  font-family: 'roboto', sans-serif;
+  background-image: url(https://img.freepik.com/free-photo/granite-texture-background_23-2147960169.jpg?t=st=1725012081~exp=1725015681~hmac=69f1af9f42d8d624794700346262e4fe8aef23db8a9abd5741d521ad1476c2a7&w=1060);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(248, 247, 248, 0.445);
+  letter-spacing: -0.3rem;
+}
+
+.vid-desc {
+  font-family: 'roboto', sans-serif;
+}
+
+.vid-more {
+  font-family: 'roboto', sans-serif;
+}
+
+.purchase {
+  border: solid;
+  border-radius: 50px;
+}
+
+@keyframes player {
+  0% {
+    color: white;
+    transform: scale(90%), ;
+  }
+
+  50% {
+    color: #370255;
+    transform: scale(100%);
+  }
+
+  100% {
+    color: white;
+    transform: scale(90%);
+  }
+}
+
+.play_btn {
+  position: absolute;
+  background-color: transparent;
+  transition: .3s ease;
+  bottom: 40%;
+  left: 50%;
+  animation: player 2s infinite ease-in-out;
+  filter: drop-shadow(3px 5px 2px rgba(33, 2, 70, 0.288));
+}
+
+/* Upcoming sec */
+.upcoming_sec {
+  background: #370255;
+}
+
+.play {
+  background-color: transparent;
+  transition: .3s ease;
+  bottom: 40%;
+  left: 50%;
+  animation: player 2s infinite ease-in-out;
+  filter: drop-shadow(3px 5px 2px rgba(33, 2, 70, 0.288));
+}
+
+@keyframes texty {
+  0% {
+    text-shadow: 2px 1px 1px rgb(44, 33, 1);
+  }
+
+  50% {
+    text-shadow: 2px 1px 2px rgb(247, 171, 9);
+  }
+
+  100% {
+    text-shadow: 2px 1px 1px rgb(14, 14, 14);
+  }
+}
+
+
+.carousel-title {
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: 900;
+  animation: texty 2s infinite ease-in-out;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel-price {
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: 900;
+  bottom: 0;
+  left: 0;
+}
+
+.overlay-feature {
+  position: absolute;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.76), rgba(255, 255, 255, 0.212));
+  top: 0;
+  left: 0;
+  width: 95.3%;
+  height: 100%;
+}
+
+.bg-book {
+  background: linear-gradient(to top, #3702554f, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #3702554f) center no-repeat;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-size: auto;
+  height: 120vh;
+}
+
+.book-title {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+}
+
+.books {
+  object-fit: cover;
+  width: 350px;
+  float: right;
+}
+
+.book_support {
+  border-radius: 5p x;
+  background-color: #c02afe;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.book_support:hover {
+  background-color: #4f036d;
+  justify-content: space-between;
+}
+
+.book-desc {
+  font-family: 'Montserrat', sans-serif;
 }
