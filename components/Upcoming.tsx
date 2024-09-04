@@ -42,7 +42,7 @@ function HoverableCarouselItem({ vid }) {
   return (
     <CarouselItem
       className="md:basis-1/2 lg:basis-1/3 carousel-card relative overflow-hidden"
-      onMouseEnter={() => setIsHovered(true)}
+      onClick={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <Image

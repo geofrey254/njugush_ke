@@ -39,7 +39,7 @@ export default function Hero() {
           <div className="">
             <Link
               href="#"
-              className="support px-6 py-2 text-sm flex w-2/5 justify-between"
+              className="support px-6 py-2 text-sm flex w-2/5 justify-between hover:bg-[#5d1586] hover:text-white"
             >
               Purchase
               <span>

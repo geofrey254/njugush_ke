@@ -14,7 +14,9 @@ export default function Book() {
           <h2 className="text-cyan-500 text-5xl font-bold book-title">
             Whispers from my Childhood
           </h2>
-          <span className="text-md text-gray-500">By Timothy Kimani</span>
+          <span className="text-sm text-gray-500">
+            By <span className="text-lg font-semibold">Timothy Kimani</span>
+          </span>
           <p className="book-desc text-gray-900 text-sm">
             A witty documentation of a journey, that paints humor in the
             unlikeliest of situations. This memoir juxtaposes various events to
